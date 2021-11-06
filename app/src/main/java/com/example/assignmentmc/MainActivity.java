@@ -1,7 +1,10 @@
 package com.example.assignmentmc;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch(v.getId()){
             case R.id.repositarybtn:
-
+                Uri webpage = Uri.parse("https://github.com/Sabrina509/Assignment3");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
             case R.id.assignmentbtn:
         }
 
