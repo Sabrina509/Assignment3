@@ -17,11 +17,13 @@
         android:layout_marginRight="84dp"
         android:layout_marginBottom="390dp"
         android:text="RollNoText"
+        android:textColor="#0B0A0A"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/repositarybtn"
         app:layout_constraintEnd_toStartOf="@+id/nametext"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/nametext"
@@ -32,11 +34,13 @@
         android:layout_marginRight="58dp"
         android:layout_marginBottom="395dp"
         android:text="NameText"
+        android:textColor="#101010"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/assignmentbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rollnotext"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/repositarybtn"
