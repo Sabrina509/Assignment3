@@ -26,18 +26,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         repositaryButton.setOnClickListener((View.OnClickListener) this);
         activityButton.setOnClickListener((View.OnClickListener) this);
-
-        final TextView Rollnotext;
-        final TextView Nametext;
-
-        Rollnotext = findViewById(R.id.rollnotext);
-        Nametext = findViewById(R.id.nametext);
-
-        Rollnotext.setText("BCSF18A509");
-        Nametext.setText("Sabrina Asim");
-
-        Rollnotext.setTextColor(Color.BLACK);
-        Nametext.setTextColor(Color.BLACK);
     }
 
     @Override
