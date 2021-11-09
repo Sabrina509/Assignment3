@@ -30,10 +30,10 @@ public class Quiz extends AppCompatActivity {
     String realAnswer;
     String studentAnswer;
 
-    private TextView tvQuestion,tvScore,tvQuestionNo;
+    private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
     private RadioGroup radioGroup;
-    private RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7;
-    private Button btnNext;
+    private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
+    private Button btnNext, ansButton;
 
     char[] halqia = {'\u0627','\u0629', '\u0639', '\u062D', '\u063A', '\u062E'};
     char[] lahatia = {'\u0642', '\u0643'};
@@ -51,6 +51,7 @@ public class Quiz extends AppCompatActivity {
         tvQuestion = findViewById(R.id.textQuestion);
         tvScore = findViewById(R.id.textScore);
         tvQuestionNo = findViewById(R.id.textQuestionNo);
+        tvResult = findViewById(R.id.resultTextView);
 
         radioGroup = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.rb1);
@@ -63,98 +64,88 @@ public class Quiz extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String realAnswer = "";
-                Random random = new Random();
-                int letterToDsiplay = random.nextInt(6);
-                if (letterToDsiplay == 0) {
-                    realAnswer = "halqia";
-                    int i = halqia.length;
-                    tvQuestion.setText(String.valueOf(halqia[random.nextInt(i)]));
-                } else if (letterToDsiplay == 1) {
-                    realAnswer = "lahatiyah";
-                    int i = lahatia.length;
-                    tvQuestion.setText(String.valueOf(lahatia[random.nextInt(i)]));
-                } else if(letterToDsiplay == 2){
-                    realAnswer = "sharjariyah-haafiyah";
-                    int i = shajariyah.length;
-                    tvQuestion.setText(String.valueOf(shajariyah[random.nextInt(i)]));
-                }
-                else if(letterToDsiplay == 3) {
-                    realAnswer = "tarfiyah";
-                    int i = tarfiyah.length;
-                    tvQuestion.setText(String.valueOf(tarfiyah[random.nextInt(i)]));
-                }
-                else if(letterToDsiplay == 4) {
-                    realAnswer = "niteeyah";
-                    int i = niteeyah.length;
-                    tvQuestion.setText(String.valueOf(niteeyah[random.nextInt(i)]));
-                }
-                else if(letterToDsiplay == 5) {
-                    realAnswer = "lisaveyah";
-                    int i = lisaveyah.length;
-                    tvQuestion.setText(String.valueOf(lisaveyah[random.nextInt(i)]));
-                }
-                else{
-                    realAnswer = "ghunna";
-                    int i = ghunna.length;
-                    tvQuestion.setText(String.valueOf(ghunna[random.nextInt(i)]));
-                }
+                    String realAnswer = "";
+                    Random random = new Random();
+                    int letterToDsiplay = random.nextInt(6);
+                    if (letterToDsiplay == 0) {
+                        realAnswer = "halqia";
+                        int i = halqia.length;
+                        tvQuestion.setText(String.valueOf(halqia[random.nextInt(i)]));
+                    } else if (letterToDsiplay == 1) {
+                        realAnswer = "lahatiyah";
+                        int i = lahatia.length;
+                        tvQuestion.setText(String.valueOf(lahatia[random.nextInt(i)]));
+                    } else if (letterToDsiplay == 2) {
+                        realAnswer = "sharjariyah-haafiyah";
+                        int i = shajariyah.length;
+                        tvQuestion.setText(String.valueOf(shajariyah[random.nextInt(i)]));
+                    } else if (letterToDsiplay == 3) {
+                        realAnswer = "tarfiyah";
+                        int i = tarfiyah.length;
+                        tvQuestion.setText(String.valueOf(tarfiyah[random.nextInt(i)]));
+                    } else if (letterToDsiplay == 4) {
+                        realAnswer = "niteeyah";
+                        int i = niteeyah.length;
+                        tvQuestion.setText(String.valueOf(niteeyah[random.nextInt(i)]));
+                    } else if (letterToDsiplay == 5) {
+                        realAnswer = "lisaveyah";
+                        int i = lisaveyah.length;
+                        tvQuestion.setText(String.valueOf(lisaveyah[random.nextInt(i)]));
+                    } else {
+                        realAnswer = "ghunna";
+                        int i = ghunna.length;
+                        tvQuestion.setText(String.valueOf(ghunna[random.nextInt(i)]));
+                    }
             }
         });
-
+        checkAnswer();
     }
-    
+
     public  void checkAnswer(){
-        if(rb1.isChecked()) {
+        if(ansButton == findViewById(R.id.rb1)) {
             studentAnswer = "halqia";
             if (studentAnswer == realAnswer) {
-                rb1.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
-                rb1.setTextColor(Color.RED);
+                tvResult.setText("False");
             }
         }
-        else if(rb2.isChecked()) {
+        else if(ansButton == findViewById(R.id.rb2)) {
             studentAnswer = "lahatiyah";
             if (studentAnswer == realAnswer) {
-                rb2.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb2.setTextColor(Color.RED);
             }
         }
-        else if(rb3.isChecked()) {
+        else if(ansButton == findViewById(R.id.rb3)) {
             studentAnswer = "sharjariyah-haafiyah";
             if (studentAnswer == realAnswer) {
-                rb3.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb3.setTextColor(Color.RED);
             }
         }
-        else if(rb4.isChecked()) {
+        else if(ansButton == findViewById(R.id.rb4)) {
             studentAnswer = "tarfiyah";
             if (studentAnswer == realAnswer) {
-                rb4.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb4.setTextColor(Color.RED);
             }
         }
-        else if(rb5.isChecked()) {
+        else if(ansButton == findViewById(R.id.rb5)) {
             studentAnswer = "niteeyah";
             if (studentAnswer == realAnswer) {
-                rb5.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb5.setTextColor(Color.RED);
             }
         }
-        else if(rb6.isChecked()) {
+        else if(ansButton == findViewById(R.id.rb6)) {
             studentAnswer = "lisaveyah";
             if (studentAnswer == realAnswer) {
-                rb6.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb6.setTextColor(Color.RED);
             }
@@ -162,11 +153,11 @@ public class Quiz extends AppCompatActivity {
         else{
             studentAnswer = "ghunna";
             if (studentAnswer == realAnswer) {
-                rb7.setTextColor(Color.GREEN);
-                score++;
+                tvResult.setText("True");
             } else {
                 rb7.setTextColor(Color.RED);
             }
         }
+        answered = true;
     }
 }
