@@ -22,7 +22,7 @@ public class assignment3 extends AppCompatActivity {
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(assignment3.this, Practice.class);
+                Intent intent = new Intent(assignment3.this, Quiz.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class assignment3 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(assignment3.this, Quiz.class);
+                Intent intent = new Intent(assignment3.this, Practice.class);
                 startActivity(intent);
             }
         });
