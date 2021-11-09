@@ -26,7 +26,7 @@ public class Quiz extends AppCompatActivity {
     int totalQuestions = 10;
     int qCounter=0;
     int score;
-    boolean answered;
+    boolean answered = true;
     String realAnswer;
     String studentAnswer;
 
@@ -59,68 +59,57 @@ public class Quiz extends AppCompatActivity {
         rb4 = findViewById(R.id.rb4);
         btnNext = findViewById(R.id.btnNext);
 
-
-        String realAnswer = "", studentAnswer = "";
+        String studentAnswer = "";
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answered == false) {
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()) {
-                        checkAnswer();
-                    } else {
-                        Toast.makeText(Quiz.this, "Please Select an option", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    GetLetter(v);
+                String realAnswer = "";
+                Random random = new Random();
+                int letterToDsiplay = random.nextInt(6);
+                if (letterToDsiplay == 0) {
+                    realAnswer = "halqia";
+                    int i = halqia.length;
+                    tvQuestion.setText(String.valueOf(halqia[random.nextInt(i)]));
+                } else if (letterToDsiplay == 1) {
+                    realAnswer = "lahatiyah";
+                    int i = lahatia.length;
+                    tvQuestion.setText(String.valueOf(lahatia[random.nextInt(i)]));
+                } else if(letterToDsiplay == 2){
+                    realAnswer = "sharjariyah-haafiyah";
+                    int i = shajariyah.length;
+                    tvQuestion.setText(String.valueOf(shajariyah[random.nextInt(i)]));
+                }
+                else if(letterToDsiplay == 3) {
+                    realAnswer = "tarfiyah";
+                    int i = tarfiyah.length;
+                    tvQuestion.setText(String.valueOf(tarfiyah[random.nextInt(i)]));
+                }
+                else if(letterToDsiplay == 4) {
+                    realAnswer = "niteeyah";
+                    int i = niteeyah.length;
+                    tvQuestion.setText(String.valueOf(niteeyah[random.nextInt(i)]));
+                }
+                else if(letterToDsiplay == 5) {
+                    realAnswer = "lisaveyah";
+                    int i = lisaveyah.length;
+                    tvQuestion.setText(String.valueOf(lisaveyah[random.nextInt(i)]));
+                }
+                else{
+                    realAnswer = "ghunna";
+                    int i = ghunna.length;
+                    tvQuestion.setText(String.valueOf(ghunna[random.nextInt(i)]));
                 }
             }
         });
 
     }
-
-    public void GetLetter(View view) {
-        Random random = new Random();
-        int letterToDsiplay = random.nextInt(7);
-        if (letterToDsiplay == 0) {
-            realAnswer = "halqia";
-            int i = halqia.length;
-            tvQuestion.setText(halqia[random.nextInt(i)]);
-        } else if (letterToDsiplay == 1) {
-            realAnswer = "lahatiyah";
-            int i = lahatia.length;
-            tvQuestion.setText(lahatia[random.nextInt(i)]);
-        } else if(letterToDsiplay == 2){
-            realAnswer = "sharjariyah-haafiyah";
-            int i = shajariyah.length;
-            tvQuestion.setText(shajariyah[random.nextInt(i)]);
-        }
-        else if(letterToDsiplay == 3) {
-            realAnswer = "tarfiyah";
-            int i = tarfiyah.length;
-            tvQuestion.setText(tarfiyah[random.nextInt(i)]);
-        }
-        else if(letterToDsiplay == 4){
-        realAnswer = "niteeyah";
-        int i = niteeyah.length;
-        tvQuestion.setText(niteeyah[random.nextInt(i)]);
-        }
-        else if(letterToDsiplay == 5){
-        realAnswer = "lisaveyah";
-        int i = lisaveyah.length;
-        tvQuestion.setText(lisaveyah[random.nextInt(i)]);
-        }
-        else{
-            realAnswer = "ghunna";
-            int i = ghunna.length;
-            tvQuestion.setText(ghunna[random.nextInt(i)]);
-        }
-    }
-
+    
     public  void checkAnswer(){
         if(rb1.isChecked()) {
             studentAnswer = "halqia";
             if (studentAnswer == realAnswer) {
                 rb1.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb1.setTextColor(Color.RED);
             }
@@ -129,6 +118,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "lahatiyah";
             if (studentAnswer == realAnswer) {
                 rb2.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb2.setTextColor(Color.RED);
             }
@@ -137,6 +127,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "sharjariyah-haafiyah";
             if (studentAnswer == realAnswer) {
                 rb3.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb3.setTextColor(Color.RED);
             }
@@ -145,6 +136,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "tarfiyah";
             if (studentAnswer == realAnswer) {
                 rb4.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb4.setTextColor(Color.RED);
             }
@@ -153,6 +145,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "niteeyah";
             if (studentAnswer == realAnswer) {
                 rb5.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb5.setTextColor(Color.RED);
             }
@@ -161,6 +154,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "lisaveyah";
             if (studentAnswer == realAnswer) {
                 rb6.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb6.setTextColor(Color.RED);
             }
@@ -169,6 +163,7 @@ public class Quiz extends AppCompatActivity {
             studentAnswer = "ghunna";
             if (studentAnswer == realAnswer) {
                 rb7.setTextColor(Color.GREEN);
+                score++;
             } else {
                 rb7.setTextColor(Color.RED);
             }
