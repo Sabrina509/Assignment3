@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(intent);
             case R.id.assignmentbtn:
+                Intent intent1 = new Intent(MainActivity.this,assignment3.class);
+                startActivity(intent1);
         }
 
 
