@@ -31,9 +31,8 @@ public class Quiz extends AppCompatActivity {
     String studentAnswer;
 
     private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
-    private RadioGroup radioGroup;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
-    private Button btnNext, ansButton;
+    private Button btnNext;
 
     char[] halqia = {'\u0627','\u0629', '\u0639', '\u062D', '\u063A', '\u062E'};
     char[] lahatia = {'\u0642', '\u0643'};
@@ -53,11 +52,13 @@ public class Quiz extends AppCompatActivity {
         tvQuestionNo = findViewById(R.id.textQuestionNo);
         tvResult = findViewById(R.id.resultTextView);
 
-        radioGroup = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.rb1);
         rb2 = findViewById(R.id.rb2);
         rb3 = findViewById(R.id.rb3);
         rb4 = findViewById(R.id.rb4);
+        rb5 = findViewById(R.id.rb5);
+        rb6 = findViewById(R.id.rb6);
+        rb7 = findViewById(R.id.rb7);
         btnNext = findViewById(R.id.btnNext);
 
         String studentAnswer = "";
@@ -102,62 +103,83 @@ public class Quiz extends AppCompatActivity {
     }
 
     public  void checkAnswer(){
-        if(ansButton == findViewById(R.id.rb1)) {
-            studentAnswer = "halqia";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                tvResult.setText("False");
+        rb1.setOnClickListener(new View.OnClickListener() {
+                                   @Override
+                                   public void onClick(View v) {
+                                       studentAnswer = "halqia";
+                                       if (studentAnswer == realAnswer) {
+                                           tvResult.setText("True");
+                                       } else {
+                                           tvResult.setText("False");
+                                       }
+                                   }
+                               });
+       rb2.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick (View v){
+                studentAnswer = "lahatiyah";
+                if (studentAnswer == realAnswer) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
             }
-        }
-        else if(ansButton == findViewById(R.id.rb2)) {
-            studentAnswer = "lahatiyah";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb2.setTextColor(Color.RED);
+            });
+            rb3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    studentAnswer = "sharjariyah-haafiyah";
+                    if (studentAnswer == realAnswer) {
+                        tvResult.setText("True");
+                    } else {
+                        tvResult.setText("False");
+                    }
+                }
+            });
+        rb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                studentAnswer = "tarfiyah";
+                if (studentAnswer == realAnswer) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
             }
-        }
-        else if(ansButton == findViewById(R.id.rb3)) {
-            studentAnswer = "sharjariyah-haafiyah";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb3.setTextColor(Color.RED);
+        });
+        rb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                studentAnswer = "niteeyah";
+                if (studentAnswer == realAnswer) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
             }
-        }
-        else if(ansButton == findViewById(R.id.rb4)) {
-            studentAnswer = "tarfiyah";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb4.setTextColor(Color.RED);
+        });
+        rb6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                studentAnswer = "lisaveyah";
+                if (studentAnswer == realAnswer) {
+                    tvResult.setText("True");
+                } else {
+                    rb6.setTextColor(Color.RED);
+                }
             }
-        }
-        else if(ansButton == findViewById(R.id.rb5)) {
-            studentAnswer = "niteeyah";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb5.setTextColor(Color.RED);
+        });
+        rb7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                studentAnswer = "ghunna";
+                if (studentAnswer == realAnswer) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
             }
-        }
-        else if(ansButton == findViewById(R.id.rb6)) {
-            studentAnswer = "lisaveyah";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb6.setTextColor(Color.RED);
-            }
-        }
-        else{
-            studentAnswer = "ghunna";
-            if (studentAnswer == realAnswer) {
-                tvResult.setText("True");
-            } else {
-                rb7.setTextColor(Color.RED);
-            }
-        }
-        answered = true;
+        });
     }
 }
