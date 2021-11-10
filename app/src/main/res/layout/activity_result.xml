@@ -8,58 +8,54 @@
 
     <TextView
         android:id="@+id/TVtotalQ"
-        android:layout_width="276dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="274dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="108dp"
         android:text="Number of Questions"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/TVcorrect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVcorrect"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="328dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="44dp"
         android:text="Number of correct"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/TVwrong"
         app:layout_constraintEnd_toEndOf="@+id/TVwrong"
-        app:layout_constraintStart_toStartOf="@+id/TVtotalQ"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVtotalQ" />
 
     <TextView
         android:id="@+id/TVwrong"
-        android:layout_width="355dp"
+        android:layout_width="347dp"
         android:layout_height="62dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="427dp"
+        android:layout_marginBottom="53dp"
         android:text="Most wrong Answers"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/TVtotalQ"
-        app:layout_constraintStart_toStartOf="@+id/TVtotalQ"
+        app:layout_constraintBottom_toTopOf="@+id/quizBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVcorrect" />
 
     <Button
         android:id="@+id/quizBtn"
         android:layout_width="154dp"
-        android:layout_height="51dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="276dp"
         android:text="Attemp Quiz?"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
