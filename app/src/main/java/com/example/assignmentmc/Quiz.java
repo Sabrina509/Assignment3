@@ -100,7 +100,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -115,7 +115,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -129,7 +129,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -143,7 +143,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -157,7 +157,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -171,7 +171,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
@@ -185,7 +185,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                     score++;
-                    tvScore.setText("Score: " + String.valueOf(score));
+                    tvScore.setText("Score: " + String.valueOf(score) + " /10");
                 } else {
                     tvResult.setText("False");
                 }
