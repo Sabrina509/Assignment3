@@ -62,24 +62,24 @@
 
     <Button
         android:id="@+id/rb4"
-        android:layout_width="165dp"
-        android:layout_height="44dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Tarfiyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.249"
+        app:layout_constraintVertical_bias="0.245"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/rb5"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Niteeyah"
         android:textSize="20sp"
@@ -95,24 +95,24 @@
 
     <Button
         android:id="@+id/rb6"
-        android:layout_width="156dp"
-        android:layout_height="55dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Lisaveyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintVertical_bias="0.032"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/rb7"
-        android:layout_width="153dp"
-        android:layout_height="50dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:minHeight="48dp"
         android:text="Ghunna"
@@ -128,17 +128,17 @@
 
     <Button
         android:id="@+id/rb2"
-        android:layout_width="159dp"
+        android:layout_width="157dp"
         android:layout_height="46dp"
         android:text="Lahatiyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/rb1"

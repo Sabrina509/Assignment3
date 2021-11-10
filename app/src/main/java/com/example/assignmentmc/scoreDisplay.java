@@ -23,7 +23,7 @@ public class scoreDisplay extends AppCompatActivity {
         result = findViewById(R.id.textView);
         Intent intent1 = getIntent();
         score = intent1.getStringExtra("SCORE");
-        result.setText(score);
+        result.setText("Your score: " + score + " /5");
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
