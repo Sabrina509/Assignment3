@@ -18,15 +18,9 @@ import java.util.Random;
 
 
 public class Quiz extends AppCompatActivity {
-    int rand,a,b;
-    Character c='\u0627';
-    Character c1='\u0649';
-    Character letter;
-
     int totalQuestions = 10;
     int qCounter=0;
     int score;
-
 
     private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
@@ -59,8 +53,6 @@ public class Quiz extends AppCompatActivity {
         rb6 = findViewById(R.id.rb6);
         rb7 = findViewById(R.id.rb7);
         btnNext = findViewById(R.id.btnNext);
-
-
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +99,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "halqia";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -120,6 +114,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "lahatiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -132,6 +128,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "sharjariyah-haafiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -144,6 +142,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "tarfiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -156,6 +156,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "niteeyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -168,6 +170,8 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "lisaveyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
@@ -180,91 +184,14 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "ghunna";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    score++;
+                    tvScore.setText("Score: " + String.valueOf(score));
                 } else {
                     tvResult.setText("False");
                 }
             }
         });
+
     }
 
-    /*public  void checkAnswer(){
-        rb1.setOnClickListener(new View.OnClickListener() {
-                                   @Override
-                                   public void onClick(View v) {
-                                       studentAnswer = "halqia";
-                                       if (studentAnswer == realAnswer) {
-                                           tvResult.setText("True");
-                                       } else {
-                                           tvResult.setText("False");
-                                       }
-                                   }
-                               });
-       rb2.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick (View v){
-                studentAnswer = "lahatiyah";
-                if (studentAnswer == realAnswer) {
-                    tvResult.setText("True");
-                } else {
-                    tvResult.setText("False");
-                }
-            }
-            });
-            rb3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    studentAnswer = "sharjariyah-haafiyah";
-                    if (studentAnswer == realAnswer) {
-                        tvResult.setText("True");
-                    } else {
-                        tvResult.setText("False");
-                    }
-                }
-            });
-        rb4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                studentAnswer = "tarfiyah";
-                if (studentAnswer == realAnswer) {
-                    tvResult.setText("True");
-                } else {
-                    tvResult.setText("False");
-                }
-            }
-        });
-        rb5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                studentAnswer = "niteeyah";
-                if (studentAnswer == realAnswer) {
-                    tvResult.setText("True");
-                } else {
-                    tvResult.setText("False");
-                }
-            }
-        });
-        rb6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                studentAnswer = "lisaveyah";
-                if (studentAnswer == realAnswer) {
-                    tvResult.setText("True");
-                } else {
-                    tvResult.setText("False");
-                }
-            }
-        });
-        rb7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                studentAnswer = "ghunna";
-                if (studentAnswer == realAnswer) {
-                    tvResult.setText("True");
-                } else {
-                    tvResult.setText("False");
-                }
-            }
-        });*/
-    //}
 }
