@@ -26,11 +26,9 @@ public class Quiz extends AppCompatActivity {
     int totalQuestions = 10;
     int qCounter=0;
     int score;
-    boolean answered = true;
-    String realAnswer;
-    String studentAnswer;
 
-    private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
+
+    private TextView tvQuestion,tvScore,tvQuestionNo, tvResult, tvCheck;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
     private Button btnNext;
 
@@ -42,6 +40,7 @@ public class Quiz extends AppCompatActivity {
     char[] lisaveyah = {'\u0638', '\u0630', '\u062B', '\u0635', '\u0633', '\u0632'};
     char[] ghunna = {'\u0645', '\u0646', '\u0641', '\u0628', '\u0648'};
 
+    public String realAnswer = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +48,7 @@ public class Quiz extends AppCompatActivity {
 
         tvQuestion = findViewById(R.id.textQuestion);
         tvScore = findViewById(R.id.textScore);
+        tvCheck = findViewById(R.id.textView);
         tvQuestionNo = findViewById(R.id.textQuestionNo);
         tvResult = findViewById(R.id.resultTextView);
 
@@ -61,11 +61,12 @@ public class Quiz extends AppCompatActivity {
         rb7 = findViewById(R.id.rb7);
         btnNext = findViewById(R.id.btnNext);
 
-        String studentAnswer = "";
+
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    String realAnswer = "";
+
                     Random random = new Random();
                     int letterToDsiplay = random.nextInt(6);
                     if (letterToDsiplay == 0) {
@@ -99,10 +100,102 @@ public class Quiz extends AppCompatActivity {
                     }
             }
         });
-        checkAnswer();
+
+        rb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String studentAnswer;
+                studentAnswer = "halqia";
+                tvCheck.setText(realAnswer);
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick (View v){
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "lahatiyah";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "sharjariyah-haafiyah";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "tarfiyah";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "niteeyah";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "lisaveyah";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
+        rb7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String studentAnswer;
+                tvCheck.setText(realAnswer);
+                studentAnswer = "ghunna";
+                if (studentAnswer.equals(realAnswer)) {
+                    tvResult.setText("True");
+                } else {
+                    tvResult.setText("False");
+                }
+            }
+        });
     }
 
-    public  void checkAnswer(){
+    /*public  void checkAnswer(){
         rb1.setOnClickListener(new View.OnClickListener() {
                                    @Override
                                    public void onClick(View v) {
@@ -166,7 +259,7 @@ public class Quiz extends AppCompatActivity {
                 if (studentAnswer == realAnswer) {
                     tvResult.setText("True");
                 } else {
-                    rb6.setTextColor(Color.RED);
+                    tvResult.setText("False");
                 }
             }
         });
@@ -180,6 +273,6 @@ public class Quiz extends AppCompatActivity {
                     tvResult.setText("False");
                 }
             }
-        });
-    }
+        });*/
+    //}
 }
