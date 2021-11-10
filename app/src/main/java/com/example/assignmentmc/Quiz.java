@@ -25,7 +25,7 @@ public class Quiz extends AppCompatActivity {
 
     private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
-    private Button btnNext;
+    private Button btnNext, btnEnd;
 
     char[] halqia = {'\u0627','\u0629', '\u0639', '\u062D', '\u063A', '\u062E'};
     char[] lahatia = {'\u0642', '\u0643'};
@@ -54,14 +54,15 @@ public class Quiz extends AppCompatActivity {
         rb6 = findViewById(R.id.rb6);
         rb7 = findViewById(R.id.rb7);
         btnNext = findViewById(R.id.btnNext);
+        btnEnd = findViewById(R.id.finishbtn);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    if(qCounter==4)
+                    if(qCounter==5)
                     {
                         Intent intent = new Intent(Quiz.this, scoreDisplay.class);
-                        intent.putExtra("SCORE", score);
+                        intent.putExtra("SCORE", String.valueOf(score));
                         startActivity(intent);
                     }
                     Random random = new Random();
@@ -200,6 +201,16 @@ public class Quiz extends AppCompatActivity {
             }
         });
 
+        btnEnd.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Quiz.this, scoreDisplay.class);
+                intent.putExtra("SCORE", String.valueOf(score));
+                startActivity(intent);
+            }
+        }
+        );
     }
 
 }

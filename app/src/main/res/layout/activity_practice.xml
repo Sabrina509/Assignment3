@@ -6,4 +6,205 @@
     android:layout_height="match_parent"
     tools:context=".Practice">
 
+    <TextView
+        android:id="@+id/textQuestionNo"
+        android:layout_width="190dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:text="Question: 1/n"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="340dp"
+        android:layout_height="97dp"
+        android:text="Question will be here ...."
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/rb3"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:text="Shajariyah-Haafiyah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <Button
+        android:id="@+id/rb4"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:minHeight="48dp"
+        android:text="Tarfiyah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.249"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/rb5"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:minHeight="48dp"
+        android:text="Niteeyah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rb2"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.141"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
+    <Button
+        android:id="@+id/rb6"
+        android:layout_width="156dp"
+        android:layout_height="55dp"
+        android:minHeight="48dp"
+        android:text="Lisaveyah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/rb7"
+        android:layout_width="153dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:text="Ghunna"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rb6"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/rb2"
+        android:layout_width="159dp"
+        android:layout_height="46dp"
+        android:text="Lahatiyah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <Button
+        android:id="@+id/rb1"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:text="Halqia"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rb4"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:layout_constraintVertical_bias="0.246" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Result"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb3"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="169dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="72dp"
+        android:text="Generate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <Button
+        android:id="@+id/finishbtn"
+        android:layout_width="128dp"
+        android:layout_height="60dp"
+        android:text="Finish"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/btnNext"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        app:layout_constraintVertical_bias="0.232" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
