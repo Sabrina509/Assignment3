@@ -28,7 +28,7 @@ public class Quiz extends AppCompatActivity {
     int score;
 
 
-    private TextView tvQuestion,tvScore,tvQuestionNo, tvResult, tvCheck;
+    private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
     private Button btnNext;
 
@@ -48,7 +48,6 @@ public class Quiz extends AppCompatActivity {
 
         tvQuestion = findViewById(R.id.textQuestion);
         tvScore = findViewById(R.id.textScore);
-        tvCheck = findViewById(R.id.textView);
         tvQuestionNo = findViewById(R.id.textQuestionNo);
         tvResult = findViewById(R.id.resultTextView);
 
@@ -106,7 +105,6 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View v) {
                 String studentAnswer;
                 studentAnswer = "halqia";
-                tvCheck.setText(realAnswer);
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
                 } else {
@@ -119,7 +117,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick (View v){
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "lahatiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
@@ -132,7 +129,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "sharjariyah-haafiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
@@ -145,7 +141,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "tarfiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
@@ -158,7 +153,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "niteeyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
@@ -171,7 +165,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "lisaveyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
@@ -184,7 +177,6 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String studentAnswer;
-                tvCheck.setText(realAnswer);
                 studentAnswer = "ghunna";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
