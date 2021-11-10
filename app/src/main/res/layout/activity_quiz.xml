@@ -55,7 +55,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
         app:layout_constraintVertical_bias="0.362" />
@@ -179,10 +179,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintVertical_bias="0.355" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -207,16 +207,16 @@
 
     <Button
         android:id="@+id/finishbtn"
-        android:layout_width="128dp"
-        android:layout_height="60dp"
+        android:layout_width="169dp"
+        android:layout_height="62dp"
         android:text="Finish"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toEndOf="@+id/btnNext"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintVertical_bias="0.182" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,13 +19,14 @@ import java.util.Random;
 
 
 public class Practice extends AppCompatActivity {
-    int totalQuestions = 5;
     int qCounter=0;
     int score;
+    int weakH, weakLa, weakS, weakT, weakN, weakLi, weakG;
+
 
     private TextView tvQuestion,tvScore,tvQuestionNo, tvResult;
     private Button rb1,rb2,rb3,rb4,rb5,rb6,rb7;
-    private Button btnNext;
+    private Button btnNext, btnFinish;
 
     char[] halqia = {'\u0627','\u0629', '\u0639', '\u062D', '\u063A', '\u062E'};
     char[] lahatia = {'\u0642', '\u0643'};
@@ -53,6 +54,7 @@ public class Practice extends AppCompatActivity {
         rb6 = findViewById(R.id.rb6);
         rb7 = findViewById(R.id.rb7);
         btnNext = findViewById(R.id.btnNext);
+        btnFinish = findViewById(R.id.finishbtn);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +91,7 @@ public class Practice extends AppCompatActivity {
                     tvQuestion.setText(String.valueOf(ghunna[random.nextInt(i)]));
                 }
                 qCounter++;
-                tvQuestionNo.setText("Question #: " + String.valueOf(qCounter) + " /5");
+                tvQuestionNo.setText("Question #: " + String.valueOf(qCounter));
             }
         });
 
@@ -103,6 +105,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakH++;
                 }
             }
         });
@@ -117,6 +120,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakLa++;
                 }
             }
         });
@@ -130,6 +134,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakS++;
                 }
             }
         });
@@ -143,6 +148,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakT++;
                 }
             }
         });
@@ -156,6 +162,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakN++;
                 }
             }
         });
@@ -169,6 +176,7 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakLi++;
                 }
             }
         });
@@ -182,10 +190,48 @@ public class Practice extends AppCompatActivity {
                     score++;
                 } else {
                     tvResult.setText("False");
+                    weakG++;
                 }
             }
         });
 
+        btnFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String weakest;
+                if(weakG<weakH && weakG<weakLa && weakG<weakLi && weakG<weakN && weakG<weakS && weakG<weakT && weakG!=0)
+                {
+                    weakest = "Ghunna";
+                }
+                else if (weakH<weakG && weakH<weakLa && weakH<weakLi && weakH<weakN && weakH<weakS && weakH<weakT && weakH!=0)
+                {
+                    weakest = "Halqia";
+                }
+                else if (weakLa<weakG && weakLa<weakH && weakLa<weakLi && weakLa<weakN && weakLa<weakS && weakLa<weakT && weakLa!=0)
+                {
+                    weakest = "Lahatiyah";
+                }
+                else if (weakLi<weakG && weakLi<weakLa && weakLi<weakH && weakLi<weakN && weakLi<weakS && weakLi<weakT && weakLi!=0)
+                {
+                    weakest = "Lisaveyah";
+                }
+                else if (weakN<weakG && weakN<weakLa && weakN<weakLi && weakN<weakH && weakN<weakS && weakN<weakT && weakN!=0)
+                {
+                    weakest = "Niteeyah";
+                }
+                else if (weakS<weakG && weakS<weakLa && weakS<weakLi && weakS<weakN && weakS<weakH && weakS<weakT && weakS!=0)
+                {
+                    weakest = "Shajariyah-Haafiyah";
+                }
+                else
+                    weakest = "Tarfiyah";
+                Intent intent = new Intent(Practice.this, result.class);
+                intent.putExtra("SCORE", String.valueOf(score));
+                intent.putExtra("WEAK", weakest);
+                intent.putExtra("TOTAL", String.valueOf(qCounter));
+                startActivity(intent);
+            }
+        });
     }
 
 }

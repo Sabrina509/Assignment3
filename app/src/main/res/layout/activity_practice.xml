@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Practice">
+    tools:context=".Quiz">
 
     <TextView
         android:id="@+id/textQuestionNo"
@@ -43,31 +43,31 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
         android:id="@+id/rb4"
-        android:layout_width="165dp"
-        android:layout_height="44dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Tarfiyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.249"
+        app:layout_constraintVertical_bias="0.245"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/rb5"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Niteeyah"
         android:textSize="20sp"
@@ -83,24 +83,24 @@
 
     <Button
         android:id="@+id/rb6"
-        android:layout_width="156dp"
-        android:layout_height="55dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:minHeight="48dp"
         android:text="Lisaveyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintVertical_bias="0.032"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/rb7"
-        android:layout_width="153dp"
-        android:layout_height="50dp"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:minHeight="48dp"
         android:text="Ghunna"
@@ -116,17 +116,17 @@
 
     <Button
         android:id="@+id/rb2"
-        android:layout_width="159dp"
+        android:layout_width="157dp"
         android:layout_height="46dp"
         android:text="Lahatiyah"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/rb1"
@@ -167,10 +167,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintVertical_bias="0.355" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -195,16 +195,16 @@
 
     <Button
         android:id="@+id/finishbtn"
-        android:layout_width="128dp"
-        android:layout_height="60dp"
+        android:layout_width="169dp"
+        android:layout_height="62dp"
         android:text="Finish"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toEndOf="@+id/btnNext"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintVertical_bias="0.182" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
