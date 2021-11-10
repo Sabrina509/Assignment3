@@ -2,6 +2,7 @@ package com.example.assignmentmc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -57,7 +58,12 @@ public class Quiz extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                    if(qCounter==4)
+                    {
+                        Intent intent = new Intent(Quiz.this, scoreDisplay.class);
+                        intent.putExtra("SCORE", score);
+                        startActivity(intent);
+                    }
                     Random random = new Random();
                     int letterToDsiplay = random.nextInt(6);
                     if (letterToDsiplay == 0) {
