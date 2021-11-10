@@ -223,8 +223,12 @@ public class Practice extends AppCompatActivity {
                 {
                     weakest = "Shajariyah-Haafiyah";
                 }
-                else
+                else if (weakT<weakG && weakT<weakLa && weakT<weakLi && weakT<weakN && weakT<weakH && weakT<weakS && weakT!=0)
+                {
                     weakest = "Tarfiyah";
+                }
+                else
+                    weakest="none";
                 Intent intent = new Intent(Practice.this, result.class);
                 intent.putExtra("SCORE", String.valueOf(score));
                 intent.putExtra("WEAK", weakest);
