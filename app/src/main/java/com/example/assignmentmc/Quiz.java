@@ -1,7 +1,9 @@
 package com.example.assignmentmc;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -59,6 +61,7 @@ public class Quiz extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tvResult.setText(" ");
                     if(qCounter==5)
                     {
                         Intent intent = new Intent(Quiz.this, scoreDisplay.class);
@@ -108,10 +111,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "halqia";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -123,10 +128,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "lahatiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -137,10 +144,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "sharjariyah-haafiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -151,10 +160,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "tarfiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -165,10 +176,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "niteeyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -179,10 +192,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "lisaveyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -193,10 +208,12 @@ public class Quiz extends AppCompatActivity {
                 studentAnswer = "ghunna";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                     tvScore.setText("Score: " + String.valueOf(score) + " /5");
                 } else {
                     tvResult.setText("False");
+                    tvResult.setTextColor(Color.RED);
                 }
             }
         });
@@ -205,9 +222,22 @@ public class Quiz extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Quiz.this, scoreDisplay.class);
-                intent.putExtra("SCORE", String.valueOf(score));
-                startActivity(intent);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Quiz.this);
+                builder.setTitle("Finish");
+                builder.setMessage("Are you sure that you want to finish?");builder.setTitle("Title");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Yes",new DialogInterface.OnClickListener()
+                {@Override
+                public void onClick(DialogInterface dialog, int asdf){
+                    Intent intent = new Intent(Quiz.this, scoreDisplay.class);
+                    intent.putExtra("SCORE", String.valueOf(score));
+                    startActivity(intent);
+                }});
+                builder.setNegativeButton("No",new DialogInterface.OnClickListener()
+                {@Override
+                public void onClick(DialogInterface dialog, int which){dialog.cancel();}});
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
             }
         }
         );
