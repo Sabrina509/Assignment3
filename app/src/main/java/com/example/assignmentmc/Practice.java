@@ -1,8 +1,10 @@
 package com.example.assignmentmc;
 
 import androidx.annotation.ColorInt;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -263,11 +265,26 @@ public class Practice extends AppCompatActivity {
                 }
                 else
                     weakest="none";
-                Intent intent = new Intent(Practice.this, result.class);
-                intent.putExtra("SCORE", String.valueOf(score));
-                intent.putExtra("WEAK", weakest);
-                intent.putExtra("TOTAL", String.valueOf(qCounter));
-                startActivity(intent);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Practice.this);
+                builder.setTitle("Finish");
+                builder.setMessage("Are you sure that you want to finish?");builder.setTitle("Title");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Yes",new DialogInterface.OnClickListener()
+                {@Override
+                public void onClick(DialogInterface dialog, int asdf){
+                    Intent intent = new Intent(Practice.this, result.class);
+                    intent.putExtra("SCORE", String.valueOf(score));
+                    intent.putExtra("WEAK", weakest);
+                    intent.putExtra("TOTAL", String.valueOf(qCounter));
+                    startActivity(intent);
+                    }});
+                builder.setNegativeButton("No",new DialogInterface.OnClickListener()
+                {@Override
+                public void onClick(DialogInterface dialog, int which){dialog.cancel();}});
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
             }
         });
     }
