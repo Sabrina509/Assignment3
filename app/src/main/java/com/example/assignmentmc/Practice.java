@@ -1,5 +1,6 @@
 package com.example.assignmentmc;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -37,6 +38,23 @@ public class Practice extends AppCompatActivity {
     char[] ghunna = {'\u0645', '\u0646', '\u0641', '\u0628', '\u0648'};
 
     public String realAnswer = "";
+    public void calculateWeak(String rAns)
+    {
+        if(rAns=="halqia")
+            weakH++;
+        if(rAns=="lahatiya")
+            weakLa++;
+        if(rAns=="sharjariyah-haafiyah")
+            weakS++;
+        if(rAns=="tarfiyah")
+            weakT++;
+        if(rAns=="niteeyah")
+            weakN++;
+        if(rAns=="lisaveyah")
+            weakLi++;
+        if(rAns=="ghunna")
+            weakG++;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +113,7 @@ public class Practice extends AppCompatActivity {
             }
         });
 
+
         rb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,10 +121,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "halqia";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakH++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -117,10 +138,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "lahatiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakLa++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -131,10 +154,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "sharjariyah-haafiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakS++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -145,10 +170,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "tarfiyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakT++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -159,10 +186,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "niteeyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakN++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -173,10 +202,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "lisaveyah";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakLi++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -187,10 +218,12 @@ public class Practice extends AppCompatActivity {
                 studentAnswer = "ghunna";
                 if (studentAnswer.equals(realAnswer)) {
                     tvResult.setText("True");
+                    tvResult.setTextColor(Color.GREEN);
                     score++;
                 } else {
                     tvResult.setText("False");
-                    weakG++;
+                    tvResult.setTextColor(Color.RED);
+                    calculateWeak(realAnswer);
                 }
             }
         });
@@ -199,31 +232,31 @@ public class Practice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String weakest;
-                if(weakG<weakH && weakG<weakLa && weakG<weakLi && weakG<weakN && weakG<weakS && weakG<weakT && weakG!=0)
+                if(weakG>weakH && weakG>weakLa && weakG>weakLi && weakG>weakN && weakG>weakS && weakG>weakT && weakG!=0)
                 {
                     weakest = "Ghunna";
                 }
-                else if (weakH<weakG && weakH<weakLa && weakH<weakLi && weakH<weakN && weakH<weakS && weakH<weakT && weakH!=0)
+                else if (weakH>weakG && weakH>weakLa && weakH>weakLi && weakH>weakN && weakH>weakS && weakH>weakT && weakH!=0)
                 {
                     weakest = "Halqia";
                 }
-                else if (weakLa<weakG && weakLa<weakH && weakLa<weakLi && weakLa<weakN && weakLa<weakS && weakLa<weakT && weakLa!=0)
+                else if (weakLa>weakG && weakLa>weakH && weakLa>weakLi && weakLa>weakN && weakLa>weakS && weakLa>weakT && weakLa!=0)
                 {
                     weakest = "Lahatiyah";
                 }
-                else if (weakLi<weakG && weakLi<weakLa && weakLi<weakH && weakLi<weakN && weakLi<weakS && weakLi<weakT && weakLi!=0)
+                else if (weakLi>weakG && weakLi>weakLa && weakLi>weakH && weakLi>weakN && weakLi>weakS && weakLi>weakT && weakLi!=0)
                 {
                     weakest = "Lisaveyah";
                 }
-                else if (weakN<weakG && weakN<weakLa && weakN<weakLi && weakN<weakH && weakN<weakS && weakN<weakT && weakN!=0)
+                else if (weakN>weakG && weakN>weakLa && weakN>weakLi && weakN>weakH && weakN>weakS && weakN>weakT && weakN!=0)
                 {
                     weakest = "Niteeyah";
                 }
-                else if (weakS<weakG && weakS<weakLa && weakS<weakLi && weakS<weakN && weakS<weakH && weakS<weakT && weakS!=0)
+                else if (weakS>weakG && weakS>weakLa && weakS>weakLi && weakS>weakN && weakS>weakH && weakS>weakT && weakS!=0)
                 {
                     weakest = "Shajariyah-Haafiyah";
                 }
-                else if (weakT<weakG && weakT<weakLa && weakT<weakLi && weakT<weakN && weakT<weakH && weakT<weakS && weakT!=0)
+                else if (weakT>weakG && weakT>weakLa && weakT>weakLi && weakT>weakN && weakT>weakH && weakT>weakS && weakT!=0)
                 {
                     weakest = "Tarfiyah";
                 }
