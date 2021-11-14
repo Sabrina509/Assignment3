@@ -77,6 +77,7 @@ public class Practice extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tvResult.setText(" ");
                 Random random = new Random();
                 int letterToDsiplay = random.nextInt(6);
                 if (letterToDsiplay == 0) {
